@@ -3,12 +3,11 @@ import LinkButton from "./LinkButton";
 
 function Error() {
     const error = useRouteError();
-    console.log(error);
 
     return (
-        <div>
+        <div className="flex h-svh flex-col items-center justify-center p-5">
             <h1>Something went wrong 😢</h1>
-            <p>{error.data || error.message}</p>
+            <p>{error.data}</p>
 
             <LinkButton to="-1">&larr; Go back</LinkButton>
         </div>
